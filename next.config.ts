@@ -16,6 +16,9 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  environment: {
+    VIDEO_DIRECTORY: process.env.VIDEO_DIRECTORY,
+  },
 };
 
 export default nextConfig;

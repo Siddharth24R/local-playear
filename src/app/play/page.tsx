@@ -4,6 +4,8 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Icons } from "@/components/icons";
 
+const VIDEO_FOLDER_PATH = process.env.VIDEO_DIRECTORY ? '/videos' : '';
+
 function formatTime(time: number) {
   const minutes = Math.floor(time / 60);
   const seconds = Math.floor(time % 60);

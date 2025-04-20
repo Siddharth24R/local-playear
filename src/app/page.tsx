@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { useRouter } from 'next/navigation';
 
-const VIDEO_FOLDER_PATH = '/videos';
+const VIDEO_FOLDER_PATH = process.env.VIDEO_DIRECTORY ? '/videos' : '';
 
 async function listVideos() {
   try {
