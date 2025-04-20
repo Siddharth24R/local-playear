@@ -8,6 +8,14 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  async rewrites() {
+    return [
+      {
+        source: '/videos/:path*',
+        destination: `${process.env.VIDEO_DIRECTORY}/:path*`,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
